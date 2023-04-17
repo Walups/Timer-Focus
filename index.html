@@ -20,28 +20,31 @@
         
         <div id="buttons">
 
-            <button class="button_timer_control">
-                <spam id="pomodoro">Pomodoro</spam>
+
+            <button id="pomodoro" class="button_timer_control">
+                <spam>Pomodoro</spam>
             </button>
             
-            <button class="button_timer_control">
-                <spam id="pause">Pausa</spam>
+            <button id="pause" class="button_timer_control">
+                <spam >Pausa</spam>
             </button>
 
         </div>
 
         <article>
 
-            <div id="timer">00:00</div>
+            <div id="timer_display">25:00</div>
 
 
             
             <div id="controller" >
-                <button id="control_timer" class="button_timer_control">
                 
-                    <spam>iniciar</spam>
+                <button id="start_button" class="button_timer_control">
+                
+                    iniciar
                 
                 </button>
+
           </div>
 
         </article>
@@ -50,7 +53,7 @@
 
     <div id="effects">
 
-        <audio>
+        <audio id="click_sound">
 
             <source src="sound/Handgun - Hammer Click.mp3" type="audio/mpeg">
             <source src="sound/Handgun - Hammer Click.wav" type="audio/wav">
@@ -58,6 +61,9 @@
         </audio>
 
     </div>
+
+    <script src="Scripts/Controller/timerFocusController.js"></script>
+    <script src="Scripts/timerfocus.js"></script>
     
 </body>
 </html>
