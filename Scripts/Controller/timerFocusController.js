@@ -11,10 +11,14 @@ class timerFocusController{
     #minuteDisplay;
     #secondDisplay;
 
+    //mode
+    #pomodoroMode = true;
+    #endMode = false;
+
     //printScream
     #timerDisplay = document.querySelector('#timer_display');
-    #isPaused = false
-    #cont
+    #isPaused = false;
+    #cont;
 
     //sound effects
     #clickEffect = document.querySelector('#click_sound');
@@ -25,12 +29,10 @@ class timerFocusController{
     pomodoroButton(){
 
         this.pomodoro.addEventListener('click', ()=>{
-
-            this.#minute = 25;
-            this.#second = 0;
-            this.display(this.#minute, this.#second);
-            this.stopCont()
-
+            
+            this.pomodoroStartValue();
+            this.#pomodoroMode = true;
+        
         });
         
     }
@@ -38,14 +40,30 @@ class timerFocusController{
     pauseButton(){
 
         this.pause.addEventListener('click', ()=>{
-
-            this.#minute = 1;
-            this.#second = 0;
-            this.display(this.#minute, this.#second);
-            this.stopCont()
+            
+            this.pausaStartValue();
+            this.#pomodoroMode = false;
 
         });
         
+
+    }
+
+    pomodoroStartValue(){
+
+        this.#minute = 25;
+        this.#second = 0;
+        this.display(this.#minute, this.#second);
+        this.stopCont();
+    
+    }
+
+    pausaStartValue(){
+
+        this.#minute = 5;
+        this.#second = 0;
+        this.display(this.#minute, this.#second);
+        this.stopCont();
 
     }
 
@@ -73,7 +91,12 @@ class timerFocusController{
             
             let timeValue = this.#minute * 60;
 
-            if(this.#isPaused === false){
+            if(this.#endMode == true){
+
+                this.reset();
+                
+                
+            }else if(this.#isPaused == false){
 
                 this.start.innerHTML = "pause"
 
@@ -89,9 +112,11 @@ class timerFocusController{
                         this.#second = 59;
                     }if(timeValue == 0){
 
+                        this.#endMode = true;
                         this.stopCont();
                         this.#minute = 0;
                         this.#second = 0;
+                        this.start.innerHTML = "Reset";
 
                     }
 
@@ -100,15 +125,34 @@ class timerFocusController{
                     this.#second --;          
 
                 },1000);
-            }else{
 
-                this.stopCont();
-                
+            }else {
+
+                this.stopCont()
 
             }
 
+
         })
          
+    }
+
+    reset(){
+
+
+        this.#endMode = false;
+        if (this.#pomodoroMode == true){
+
+            this.pomodoroStartValue();
+        
+
+        } else {
+
+            this.pausaStartValue();
+
+        }
+
+
     }
 
     stopCont(){
