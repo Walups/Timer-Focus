@@ -1,69 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <title>Timerfocus</title>
+    <link rel="shortcut icon" href="icones/timer_86585 (1).ico" type="image/x-icon">
+    <title>Timer Focus</title>
 </head>
+
 <body>
 
-    <header id="header_site">
+    <div id="timer_area">
+
+        <header id="header_site">
+
+            <h1 id="header_timer">timer focus</h1>
+        </header>
         
-        <h1 id="header_timer">timer focus</h1>
+        <section id="body_timer">
 
-    </header>
-
-    <section id="body_site">
-
-        
-        <div class="buttons">
-
-
-            <button id="pomodoro" class="button_timer_control">
-                <spam>Pomodoro</spam>
-            </button>
-            
-            <button id="pause" class="button_timer_control">
-                <spam >Pausa</spam>
-            </button>
-
-        </div>
-
-        <article>
-
-            <div id="timer_display">25:00</div>
-
-
-            
-            <div class="buttons" >
-                
-                <button id="start_button" class="button_timer_control">
-                
-                    iniciar
-                
+            <div class="buttons">
+                <button id="pomodoro" class="button_timer_control">
+                    <spam>Pomodoro</spam>
                 </button>
-                    
+
+                <button id="pause" class="button_timer_control">
+                    <spam>Pausa</spam>
+                </button>
             </div>
+            <article>
+                <div id="timer_display">25:00</div>
 
-        </article>
+                <div class="buttons">
 
-    </section>
+                    <button id="start_button" class="button_timer_control">
 
-    <div id="effects">
+                        iniciar
 
-        <audio id="click_sound">
+                    </button>
 
-            <source src="sound/Handgun - Hammer Click.mp3" type="audio/mpeg">
-            <source src="sound/Handgun - Hammer Click.wav" type="audio/wav">
+                </div>
+            </article>
+        </section>
+        <div id="effects">
+            <audio id="click_sound">
+                <source src="sound/Handgun - Hammer Click.mp3" type="audio/mpeg">
+                <source src="sound/Handgun - Hammer Click.wav" type="audio/wav">
+            </audio>
+        </div>
+    </div>
 
-        </audio>
+    <div id="articles_area">
+
+        <section>
+
+            <br>
+            <article>
+
+                <h1>O que é o Timer Focus?</h1>
+                <br>
+                <p class="info_text">A ideia do Timer Focus foi criar uma ferramenta online para aumentar a produtividade do usuário. Para isso foi desenvolvido </p>
+
+            </article>
+            <br>
+            <article>
+
+                <h1>O que o método pomodoro?</h1>
+                <br>
+                <p class="info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget placerat urna. Mauris facilisis
+                    euismod mi, vitae ullamcorper purus vehicula eu. In nec lorem pretium velit tristique malesuada non
+                    at tortor. Nullam porttitor nisl id magna interdum auctor. Ut a tempor urna. Etiam porttitor diam at
+                    consectetur vehicula. Sed varius eleifend diam in ullamcorper. Quisque tincidunt pulvinar ipsum a
+                    rhoncus. Pellentesque tincidunt leo id massa fringilla, at ultrices ligula rhoncus. Duis dolor elit,
+                    aliquam ac turpis ut, imperdiet ornare ante.</p>
+
+            </article>
+            <br>
+            <article>
+
+                <h1>Como funciona?</h1>
+                <br>
+                <p class="info_text" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget placerat urna. Mauris facilisis
+                    euismod mi, vitae ullamcorper purus vehicula eu. In nec lorem pretium velit tristique malesuada non
+                    at tortor. Nullam porttitor nisl id magna interdum auctor. Ut a tempor urna. Etiam porttitor diam at
+                    consectetur vehicula. Sed varius eleifend diam in ullamcorper. Quisque tincidunt pulvinar ipsum a
+                    rhoncus. Pellentesque tincidunt leo id massa fringilla, at ultrices ligula rhoncus. Duis dolor elit,
+                    aliquam ac turpis ut, imperdiet ornare ante.</p>
+
+            </article>
+
+
+
+        </section>
 
     </div>
 
+    <footer id="footer_site">
+
+        <hr>
+
+        <nav id="nav_footer">
+
+            <a href="index.html" rel="prev">Home</a>
+            <a href="https://www.linkedin.com/in/wallison-lopes/" rel="external">Contato</a>
+            <a href="https://github.com/Walups" rel="external">Github</a>
+
+        </nav>
+
+        <p id="copy">&copy; todos os direitos reservados a Wallison Lopes</p>
+
+    </footer>
+
     <script src="Scripts/Controller/timerFocusController.js"></script>
     <script src="Scripts/timerfocus.js"></script>
-    
+
 </body>
+
 </html>

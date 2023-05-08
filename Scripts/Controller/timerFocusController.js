@@ -55,7 +55,8 @@ class timerFocusController{
         this.#second = 0;
         this.display(this.#minute, this.#second);
         this.stopCont();
-    
+        this.pomodoro.style = 'background-color: rgba(0, 0, 0, 0.35)'
+        this.pause.style = 'background-color: rgba(0, 0, 0, 0.5)'
     }
 
     pausaStartValue(){
@@ -64,7 +65,8 @@ class timerFocusController{
         this.#second = 0;
         this.display(this.#minute, this.#second);
         this.stopCont();
-
+        this.pause.style = 'background-color: rgba(0, 0, 0, 0.35)'
+        this.pomodoro.style = 'background-color: rgba(0, 0, 0, 0.5)'
     }
 
     formatTimer(timeValue){
